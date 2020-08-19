@@ -12,9 +12,11 @@
         "Standard_RAGRS",
         "Premium_LRS"
       ]
-    }},
+    },
+    "pmsaname": {"type": "string"}
+  },
   "variables": {
-    "pmsa1969Name": "[concat('pmsa1969', uniqueString(resourceGroup().id))]"},
+    "pmsa1969Name": "[concat(parameters('pmsaname'), uniqueString(resourceGroup().id))]"},
   "resources": [
     {
       "name": "[variables('pmsa1969Name')]",
